@@ -1,0 +1,8 @@
+{
+  "name": "FitText",
+  "version": "1.2.0",
+  "main": "jquery.fittext.js",
+  "peerDependencies": {
+    "jquery": "^3.0.0"
+  }
+}

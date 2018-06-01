@@ -1,4 +1,3 @@
-/*global jQuery */
 /*!
 * FitText.js 1.2
 *
@@ -8,8 +7,15 @@
 *
 * Date: Thu May 05 14:23:00 2011 -0600
 */
-
-(function( $ ){
+(function(root, factory) {
+  if (typeof define === 'function' && define.amd) {
+    define(['jquery'], factory);
+  } else if (typeof exports === 'object') {
+    module.exports = factory(require('jquery'));
+  } else {
+    root.ResponsiveBootstrapToolkit = factory(root.jQuery);
+  }
+})(this, function( $ ){
 
   $.fn.fitText = function( kompressor, options ) {
 
@@ -40,4 +46,4 @@
 
   };
 
-})( jQuery );
+});
